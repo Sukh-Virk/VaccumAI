@@ -1,0 +1,42 @@
+Function Weighted-DFS(problem) returns solution path or failure:
+    root ← Node(STATE = problem.INITIAL, COST = 0, PATH = [problem.INITIAL])
+    if problem.Is-GOAL(root.STATE):
+        return root.PATH  # If the initial state is the goal, return the path immediately
+
+    
+    Frontier = last LIFO deque
+    Explored = an empty set
+    CheapestCost = a large number
+    BestPath  = empty the cheapest solution
+
+    while Frontier is not empty:
+       
+        currentNode = pop from frontier
+
+        
+        if problem.Is-GOAL(currentNode.STATE):
+            if currentNode.COST  is smaller than CheapestCost:
+                CheapestCost update to current node cost
+                BestPath becomes current nodes path
+                keep going
+
+        
+        if current node is not in explored
+            we add it to the set
+
+           
+            For each child, calculate its total cost by adding the action cost to the current node’s cost and update its path
+             by appending the child’s  state.
+             If the child is unexplored or has a cheaper cost, update its cost and add it to the Frontier. 
+            Repeat for the next child.
+
+                
+                if child.STATE not in Explored:
+                   add child to frontier
+
+   
+    if BestPath is not empty
+        return BestPath
+
+    
+    return failure
