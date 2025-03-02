@@ -13,3 +13,4 @@ Uniform Cost Search (UCS) to optimize path efficiency.
 Cost-based movement decisions, ensuring the AI chooses optimal paths.
 
 Step, turn, stay, and left functions, giving the AI fine-tuned movement capabilities
+![image](https://github.com/user-attachments/assets/f53ce8c1-81de-4438-b6ab-2feee1b807b9)
